@@ -1,0 +1,51 @@
+:root {
+    --primary: #D9534F;
+    --secondary: #FFAD60;
+}
+
+@media screen and (max-width: 768px) {
+    #drawer {
+        z-index: 2;
+        width: 200px !important;
+        top: 50px;
+        left: 0;
+        padding: 30px 15px;
+        height: 100vh;
+        position: absolute;
+        -webkit-transform: translate(-200px, 0);
+        transform: translate(-200px, 0);
+        -webkit-transition: -webkit-transform 1s ease;
+        transition: transform 1s ease, top 1s ease;
+        display: none;
+        background-color: var(--primary);
+    }
+
+    #drawer.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        display: block;
+    }
+
+    .nav-list {
+        margin-top: 12px;
+    }
+
+    .nav-item {
+        min-height: 44px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-inner-title {
+        font-size: 4rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-list li {
+        display: inline !important;
+        margin: 0 12px;
+    }
+}
