@@ -47,7 +47,6 @@ span.material-symbols-outlined {
 .header-logo p {
   font-size: 20px;
   font-weight: 700;
-  text-decoration: underline;
   color: var(--secondary);
 }
 
@@ -71,6 +70,8 @@ span.material-symbols-outlined {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .skip-link {
@@ -126,7 +127,8 @@ span.material-symbols-outlined {
 
 .hero-inner-button {
   display: block;
-  max-width: 200px;
+  min-width: 44px;
+  min-height: 44px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 20px;
@@ -159,11 +161,11 @@ span.material-symbols-outlined {
 }
 
 .restaurant-showcase {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 64px;
+  padding: 2rem;
   text-align: center;
 
 }
@@ -173,6 +175,118 @@ span.material-symbols-outlined {
   display: flex;
   flex-direction: column;
   max-width: 400px;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 64px;
+  padding: 2rem;
+}
+
+.restaurant-item {
+  background-color: #fff;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 20px 20px 40px #d9d9d9,
+    -20px -20px 40px #ffffff;
+}
+
+.image_wrapper {
+  position: relative;
+}
+
+.restaurant-image {
+  display: block;
+  width: 100%;
+  height: 250px;
+  border-radius: 25px 25px 0px 0px;
+  border-bottom: 5px solid var(--secondary);
+}
+
+.overlay {
+  position: absolute;
+}
+
+.rating {
+  left: 0;
+  top: 0;
+  padding: .7rem;
+  border-radius: 25px 0px 25px 0px;
+  background: #FFAD60;
+}
+
+.restaurant-rating {
+  color: #fff;
+}
+
+.restaurant-rating span.material-symbols-outlined {
+  font-size: 16px;
+  color: #FFF;
+  padding-bottom: 0px !important;
+}
+
+.restaurant-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-location span.material-symbols-outlined {
+  font-size: 16px !important;
+  padding-bottom: 0px !important;
+}
+
+.restaurant-location {
+  font-size: 16px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.restaurant-name {
+  font-size: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.restaurant-description {
+  height: 110px;
+  font-size: 14px;
+  line-height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.restaurant-footer {
+  margin-top: auto;
+}
+
+.restaurant-button {
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  margin-top: 10px;
+  background-color: #FFAD60;
+  text-align: center;
+  padding: .7rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.restaurant-button:hover {
+  background-color: #885c34;
 }
 
 footer {

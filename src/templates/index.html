@@ -10,6 +10,8 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +32,7 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="">Home</a></li>
           <li class="nav-item"><a href="#">Favorite</a></li>
-          <li class="nav-item"><a href="">About Us</a></li>
+          <li class="nav-item"><a href="https://github.com/ariabagaswara23">About Us</a></li>
         </ul>
       </nav>
     </div>
@@ -41,31 +43,40 @@
         <div class="hero-inner">
           <h1 class="hero-inner-title"><i>Re:<span>staurant</span></i></h1>
           <p class="hero-inner-tagline">Temukan Restaurant favoritmu!</p>
-          <button type="submit" class="hero-inner-button" href="#main">Explore</button>
+          <a class="hero-inner-button" href="#main">Explore</a>
         </div>
       </div>
       <article id="main">
-        <h2 class="title">Kenapa anda harus memilih kami</h2>
-        <div class="restaurant-showcase">
-          <div class="icon-group">
-            <span class="material-symbols-outlined">
-              bookmark
-            </span>
-            <p>Simpan Restoran favoritmu untuk dikunjungi nanti</p>
+        <section>
+
+          <h2 class="title">Kenapa anda harus memilih kami</h2>
+          <div class="restaurant-showcase">
+            <div class="icon-group">
+              <span class="material-symbols-outlined">
+                bookmark
+              </span>
+              <p>Simpan Restoran favoritmu untuk dikunjungi nanti</p>
+            </div>
+            <div class="icon-group">
+              <span class="material-symbols-outlined">
+                star
+              </span>
+              <p>Cari tahu sebagus apa restoran dengan fitur rating dari pengunjung</p>
+            </div>
+            <div class="icon-group">
+              <span class="material-symbols-outlined">
+                restaurant
+              </span>
+              <p>Pilih restoran dengan menu yang cocok untuk kamu dan keluarga</p>
+            </div>
           </div>
-          <div class="icon-group">
-            <span class="material-symbols-outlined">
-              star
-            </span>
-            <p>Cari tahu sebagus apa restoran dengan fitur rating dari pengunjung</p>
+        </section>
+        <section>
+          <h2 class="title">Temukan Restaurant Pilihanmu disini!</h2>
+          <div class="restaurant-list" id="restaurant-list">
+
           </div>
-          <div class="icon-group">
-            <span class="material-symbols-outlined">
-              restaurant
-            </span>
-            <p>Pilih restoran dengan menu yang cocok untuk kamu dan keluarga</p>
-          </div>
-        </div>
+        </section>
       </article>
     </main>
   </section>
