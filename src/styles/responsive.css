@@ -67,6 +67,12 @@
 
     .nav-item {
         min-height: 44px;
+        margin-top: 10px;
+    }
+
+    .nav-item a {
+        padding-left: 0;
+        font-size: 1.5rem;
     }
 
     .title {
@@ -109,7 +115,7 @@
     }
 
     .header-container {
-        padding: 5px 4rem;
+        padding: 5px 3.5rem;
     }
 
     .icon-group p {
