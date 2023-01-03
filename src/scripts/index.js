@@ -8,21 +8,21 @@ const hero = document.querySelector('.hero');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#drawer');
 
-hamburger.addEventListener('click', function (event) {
-    drawer.classList.toggle('open');
-    event.stopPropagation();
+hamburger.addEventListener('click', (event) => {
+  drawer.classList.toggle('open');
+  event.stopPropagation();
 });
 
-hero.addEventListener('click', function () {
-    drawer.classList.remove('open');
+hero.addEventListener('click', () => {
+  drawer.classList.remove('open');
 });
 
-main.addEventListener('click', function () {
-    drawer.classList.remove('open');
+main.addEventListener('click', () => {
+  drawer.classList.remove('open');
 });
 
 data.restaurants.forEach((restaurant) => {
-    const dataset = `
+  const dataset = `
        <article class="restaurant-item">
             <div class="image_wrapper">
                 <img class="restaurant-image" src="${restaurant.pictureId}" alt="Restaurant Image">
@@ -43,5 +43,5 @@ data.restaurants.forEach((restaurant) => {
        </article> 
     `;
 
-    document.getElementById("restaurant-list").innerHTML += dataset;
-})
+  document.getElementById('restaurant-list').innerHTML += dataset;
+});
