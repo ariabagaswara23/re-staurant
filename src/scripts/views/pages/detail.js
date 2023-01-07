@@ -1,11 +1,15 @@
 import restaurantData from '../../data/restaurantdata-source';
 import UrlParser from '../../routes/url-parser';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import {
+  createRestaurantDetailTemplate, createCategoryTemplate, createMenuTemplate, createReviewTemplate,
+} from '../templates/template-creator';
 
 const Detail = {
   async render() {
     return `
-    <div id="restaurant-detail" class="restaurant-detail"></div>
+    <div class="wrapper">
+      <div id="restaurant-detail" class="restaurant-detail"></div>
+    </div>
     `;
   },
 
@@ -13,8 +17,53 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await restaurantData.detailRestaurant(url.id);
     const restaurantContainer = document.querySelector('#restaurant-detail');
-    restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant.restaurant);
-    console.log(restaurant.restaurant);
+    console.log(restaurant);
+
+    if (restaurant.error === false) {
+      this.successFetch(restaurant, restaurantContainer);
+    } else {
+      this.failedFetch(restaurantContainer);
+    }
+  },
+
+  async successFetch(restaurant, restaurantContainer) {
+    const detailContainer = restaurantContainer;
+    const detailData = restaurant.restaurant;
+
+    let categories = '';
+    let foods = '';
+    let drinks = '';
+    let reviews = '';
+
+    detailData.categories.forEach((category) => {
+      categories += createCategoryTemplate(category);
+    });
+
+    detailData.menus.foods.forEach((food) => {
+      foods += createMenuTemplate(food);
+    });
+
+    detailData.menus.drinks.forEach((drink) => {
+      drinks += createMenuTemplate(drink);
+    });
+
+    detailData.customerReviews.forEach((review) => {
+      reviews += createReviewTemplate(review);
+    });
+
+    // eslint-disable-next-line max-len
+    detailContainer.innerHTML = createRestaurantDetailTemplate(detailData, categories, foods, drinks, reviews);
+  },
+
+  async failedFetch(restaurantContainer) {
+    const detailContainer = restaurantContainer;
+    detailContainer.innerHTML = `
+    <div class="fetch-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>Oops, terjadi kesalahan!</p>
+      <a href="/">Kembali ke Home</a>
+    </div>
+    `;
   },
 };
 
