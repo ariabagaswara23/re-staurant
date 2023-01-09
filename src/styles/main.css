@@ -431,10 +431,12 @@ footer {
   height: 75vh;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  gap: 2rem;
 }
 
 .fetch-error span.material-symbols-outlined {
-  font-size: 10rem;
+  font-size: 12rem;
   padding-bottom: 10px !important;
 }
 
@@ -450,6 +452,12 @@ footer {
   padding: 6px 12px;
   border-radius: 6px;
   text-decoration: none;
+  min-width: 44px;
+  min-height: 44px;
+  border: none;
+  font-size: 32px;
+  display: block;
+  cursor: pointer;
 }
 
 .fetch-error a:hover {
@@ -491,4 +499,35 @@ footer {
   height: 20px;
   font-size: 14px;
   margin-bottom: 0 !important;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.restaurant-favorite {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 64px;
+  padding: 2rem;
+}
+
+.wrapper-favorite {
+  background-color: #fff;
 }

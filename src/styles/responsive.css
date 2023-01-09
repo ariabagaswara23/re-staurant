@@ -30,10 +30,17 @@
     grid-template-columns: 1fr;
   }
 
+  .restaurant-favorite {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 870px) {
   .restaurant-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .restaurant-favorite {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -127,6 +134,10 @@
   }
 
   .restaurant-list {
+    margin: 0 2rem;
+  }
+
+  .restaurant-favorite {
     margin: 0 2rem;
   }
 
