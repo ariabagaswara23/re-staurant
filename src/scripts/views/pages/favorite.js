@@ -27,7 +27,7 @@ const Favorite = {
       restaurantsErrorContainer.innerHTML = `
         <div class="fetch-error">
           <span class="material-symbols-outlined">search</span>
-          <p>Belum ada restoran yang ditambahkan ke list favorite</p>
+          <p id="empty">Belum ada restoran yang ditambahkan ke list favorite</p>
           <a href="/" class="back-to-home">Kembali ke Home</a>
         </div>
       `;
