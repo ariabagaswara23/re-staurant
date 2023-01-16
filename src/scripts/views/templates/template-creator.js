@@ -58,7 +58,7 @@ const createRestaurantDetailTemplate = (restaurant, category, foods, drinks, rev
 const createRestaurantListItemTemplate = (restaurant) => `
     <article class="restaurant-item">
     <div class="image_wrapper">
-        <img class="restaurant-image" src="${CONFIG.BASE_IMG_URL}/small/${restaurant.pictureId}" alt="Restaurant Image">
+        <img class="restaurant-image lazyload" data-src="${CONFIG.BASE_IMG_URL}/small/${restaurant.pictureId}" alt="Restaurant Image">
         <div class="overlay rating">
             <p class="restaurant-rating"><span class="material-symbols-outlined">star</span> ${restaurant.rating}</p>
         </div>

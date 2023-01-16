@@ -110,9 +110,23 @@
     justify-content: center;
     margin: 0 auto;
   }
+
+  .hero {
+    background-image: linear-gradient(to top,
+        rgba(3, 3, 3, 0.856),
+        rgba(50, 9, 8, 0.5)),
+      url("../public/images/heros/hero-image_4-small.jpg");
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to top,
+        rgba(3, 3, 3, 0.856),
+        rgba(50, 9, 8, 0.5)),
+      url("../public/images/heros/hero-image_4-large.jpg");
+  }
+
   .hero-inner-title {
     font-size: 4rem;
   }
