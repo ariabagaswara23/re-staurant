@@ -1,5 +1,7 @@
 const common = require('./webpack.common');
 const { merge } = require('webpack-merge');
+// eslint-disable-next-line prefer-destructuring
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(common, {
   mode: 'production',
