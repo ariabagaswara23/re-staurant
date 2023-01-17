@@ -20,6 +20,11 @@ module.exports = merge(common, {
       },
     ],
   },
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
+    }),
+  ],
   optimization: {
     splitChunks: {
       chunks: 'all',
